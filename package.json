@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "watch-poll": "npm run watch -- --watch-poll"
+  },
+  "main": "background.js",
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "bootstrap": "^4.0.0",
+    "lodash.chunk": "^4.2.0",
+    "popper.js": "^1.12",
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
+    "vue": "^2.5.17",
+    "vue-flickity": "^1.1.2",
+    "vue-router": "^3.0.1",
+    "vue-toastr": "^2.0.14",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "axios": "^0.19",
+    "cross-env": "^5.2.1",
+    "css-loader": "^5.0.1",
+    "electron": "^7.0.0",
+    "electron-devtools-installer": "^3.1.0",
+    "laravel-mix": "^5.0.9",
+    "lodash": "^4.17.19",
+    "resolve-url-loader": "^3.1.0",
+    "style-loader": "^2.0.0",
+    "vue-cli-plugin-electron-builder": "~2.0.0-rc.5",
+    "vue-template-compiler": "^2.6.12",
+    "@vue/cli-plugin-babel": "^3.0.0",
+    "@vue/cli-plugin-eslint": "^3.0.0",
+    "@vue/cli-service": "^3.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "tailwindcss": "^0.7.0"
+  }
+}
